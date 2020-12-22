@@ -29,10 +29,10 @@ int main() {
     }
     printf("\nConnected successfully!\n");
 
+    printf("Enter 5 numbers: ");
+    scanf("%s",buff);
     while(1) {
         int choice = 4;
-        printf("Enter 5 numbers: ");
-        scanf("%s",buff);
         printf("1. Search a number\n");
         printf("2. Sort \n");
         printf("3. Split \n");

@@ -49,12 +49,22 @@ int main(){
     printf("Client accepted.\n");
     
     while(1) {
+        memset(buff, '\0', sizeof(buff));
         if((recvdbytes=recv(client_sockfd,buff,sizeof(buff),0)) == -1){
             close(client_sockfd);
             close(sockfd);
         }
 
-        puts(buff);
+        if(buff[7] == 4) {
+            printf("Client exited.\n");
+        }
+        printf("Option: ");
+        // for(int i = 0; i < len(buff); i++){
+        //     printf("%d", &buff[i]);
+        // }
+        // printf("%c", buff[6]);
+
+        // puts(buff);
         printf("\n");
         printf("Enter your message: ");
         scanf("%s", buff);
@@ -69,10 +79,6 @@ int main(){
 
     close(client_sockfd);
     close(sockfd);
-
-
-
-
 
 
 }
