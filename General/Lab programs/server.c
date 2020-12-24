@@ -7,7 +7,7 @@
 #include<netinet/in.h>
 #define MAXSIZE 90
 
-main()
+int main()
 {
 int sockfd,newsockfd,retval;
 socklen_t actuallen;
